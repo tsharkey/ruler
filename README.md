@@ -10,7 +10,7 @@ Seems like you could probably get this to work better but right I am just storin
 
 ## Usage
 ```
-# honestly not sure how this works with python but create the vent and install requirements
+# honestly not sure how this works with python but create the venv and install requirements
 $ make venv
 
 # runs the db, initial schema, seeding, and embedding creation
