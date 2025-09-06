@@ -14,9 +14,9 @@ PGPASSWORD=postgres psql -h localhost -p 5432 -U postgres -d postgres -f build/s
 echo "Database initialized"
 
 echo "Seeding database..."
-python3 seed.py --game-version 10 warhammer-10e-core-rules.json warhammer40k
+python3 script/seed.py --game-version 10 warhammer-10e-core-rules.json warhammer40k
 
 echo "Creating embeddings..."
-python3 create-embeddings.py
+python3 script/create-embeddings.py
 
-echo "Done!"
+echo "Finished!"

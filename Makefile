@@ -1,4 +1,4 @@
-.PHONY: init start
+.PHONY: init start clean seed connect venv
 
 init:
 	./script/init.sh
