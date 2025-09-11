@@ -1,10 +1,10 @@
-.PHONY: init start clean seed connect venv
+.PHONY: init start clean seed connect 
 
 init:
 	./script/init.sh
 
-start:
-	./script/start.sh
+start-server:
+	uv run uvicorn main:app --reload
 
 clean:
 	docker compose down
