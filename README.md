@@ -19,17 +19,23 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Or with pip
 pip install uv
+```
 
 #### Install Docker
-https://docs.docker.com/get-docker/
-```
+[Get Docker](https://docs.docker.com/get-docker/)
 
 ### Run
-
+If you are doing this for the first time
 ```
+# if you are doing this for the first time
+$ uv sync
+
 # runs the db, initial schema, seeding, and embedding creation
 $ make init
-
+```
+---
+Otherwise
+```
 # if you already have the db initialized
 $ make start-db
 
