@@ -9,13 +9,33 @@ Gave the pdf to Llamaindex and let it parse it. Could probably tune this better.
 Seems like you could probably get this to work better but right I am just storing the page text but you could potentially parse it smarter with headings and such
 
 ## Usage
-```
-# honestly not sure how this works with python but create the venv and install requirements
-$ make venv
 
+### Requirements
+
+#### Install UV
+```
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or with pip
+pip install uv
+
+#### Install Docker
+https://docs.docker.com/get-docker/
+```
+
+### Run
+
+```
 # runs the db, initial schema, seeding, and embedding creation
 $ make init
 
-# does vector search
-$ python3 search.py "how does combat work" 5
+# if you already have the db initialized
+$ make start-db
+
+# runs the server
+$ make start-server
+
+# run a query
+$ curl -X POST -H "Content-Type: application/json" -d '{"question": "how does combat work", "limit": 5}' http://localhost:8000/query
 ```

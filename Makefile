@@ -6,6 +6,9 @@ init:
 start-server:
 	uv run uvicorn main:app --reload
 
+start-db:
+	docker compose up -d
+
 clean:
 	docker compose down
 	rm -rf postgres
